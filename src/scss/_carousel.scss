@@ -1,0 +1,116 @@
+/* -----CAROUSEL----- */
+header {
+  top: 0;
+}
+
+.tns-nav {
+  display: none;
+}
+
+.header__bg {
+  position: relative;
+
+  .diap__1 {
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background-image: url(../../assets/trumpet-player-cuba.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% 40%;
+    filter: brightness(75%);
+  }
+
+  .diap__2 {
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background-image: url(../../assets/colored-cuba-street.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 70% 40%;
+    filter: brightness(75%);
+  }
+
+  .diap__3 {
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background-image: url(../../assets/colored-cars-famous-taxi-cuba.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 75% 40%;
+    filter: brightness(75%);
+  }
+}
+
+.carousel__container {
+  position: relative;
+  isolation: isolate;
+}
+
+.controls {
+  text-align: center;
+
+  .prev {
+    left: 25px;
+  }
+
+  .next {
+    right: 25px;
+  }
+
+  li {
+    display: block;
+    position: absolute;
+    list-style: none;
+    top: 50%;
+    height: 40px;
+    padding: 5px;
+    cursor: pointer;
+    color: $broke__white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $indian__yellow;
+    }
+
+    i {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    span {
+      padding: 3px;
+    }
+  }
+}
+
+#customize__toggle {
+  display: none;
+}
+
+/* -----TITLE----- */
+.header__title {
+  text-align: center;
+  font-family: $pacifico;
+  font-size: 2.3rem;
+  color: $classic__white;
+  margin: auto;
+  position: absolute;
+  top: 50px;
+
+  @media screen and (min-width: $tablet_breakpoint) {
+    font-size: 2.6rem;
+    top: 150px;
+    left: 40px;
+  }
+
+  @media screen and (min-width: $computer_breakpoint) {
+    font-size: 5rem;
+    top: 75px;
+    left: 80px;
+  }
+}

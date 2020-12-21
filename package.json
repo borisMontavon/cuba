@@ -1,0 +1,17 @@
+{
+  "name": "Cuba_Tribute_Page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "compile-scss": "gulp",
+    "watch-scss": "gulp watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp-sass": "^4.1.0"
+  }
+}

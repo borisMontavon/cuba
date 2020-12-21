@@ -1,0 +1,57 @@
+/* -----THEME BUTTON----- */
+.darkmode-toggle {
+  z-index: 100 !important;
+  width: 40px !important;
+  height: 40px !important;
+  top: 10px;
+}
+
+/* -----DARKMODE----- */
+.darkmode--activated {
+  #toTopButton {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: $dark__body__color;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $indian__yellow;
+    }
+  }
+
+  nav {
+    background-color: $rich__black;
+  }
+
+  .nav__links {
+    background-color: $rich__black;
+
+    a {
+      color: $broke__white;
+    }
+  }
+
+  .burger {
+    div {
+      background-color: $broke__white;
+    }
+  }
+
+  main {
+    background-color: $dark__body__color;
+    color: $broke__white;
+  }
+
+  .links__img__1,
+  .links__img__2,
+  .links__img__3 {
+    border: 1px solid $rich__black;
+  }
+
+  .links__text__1,
+  .links__text__2,
+  .links__text__3 {
+    background-color: $rich__black;
+    border: 1px solid $rich__black;
+    color: $broke__white;
+  }
+}

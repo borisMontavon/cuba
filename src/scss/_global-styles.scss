@@ -1,0 +1,127 @@
+// Global Style
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: $indian__yellow;
+  color: $classic__white;
+  text-shadow: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 0.8rem;
+
+  @media screen and (min-width: $tablet_breakpoint) {
+    font-size: 0.9rem;
+  }
+
+  @media screen and (min-width: $computer_breakpoint) {
+    font-size: 1rem;
+  }
+}
+
+/* -----TO TOP BUTTON----- */
+#toTopButton {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  bottom: 20px;
+  right: 20px;
+  z-index: 98;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: $broke__white;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+
+  span {
+    padding: 8px;
+  }
+
+  @media screen and (min-width: $computer_breakpoint) {
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $indian__yellow;
+    }
+  }
+}
+
+/* -----MAIN----- */
+main {
+  background-color: $broke__white;
+  padding-top: 100px;
+  position: relative;
+}
+
+.container {
+  margin: auto 5%;
+  padding-bottom: 100px;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    margin: auto 10%;
+  }
+}
+
+/* ----H3----- */
+.section__container {
+  margin: 0 auto;
+  padding-top: 70px;
+
+  h3 {
+    font-family: $pacifico;
+    font-size: 2.6rem;
+    color: $indian__yellow;
+    text-align: center;
+
+    @media screen and (min-width: $tablet_breakpoint) {
+      font-size: 5rem;
+    }
+
+    @media screen and (min-width: $computer_breakpoint) {
+      font-size: 8rem;
+    }
+  }
+}
+
+/* -----FOOTER----- */
+/*to change the high of the footer, and keep the parallax effect, change:
+    main {margin-bottom}
+    .container {padding-bottom}
+with the values of the new footer's height*/
+.footer__content {
+  height: 50px;
+  width: 100%;
+}
+
+.footer__text {
+  font-family: $montserrat;
+  background-color: $gainsboro;
+
+  p {
+    text-align: center;
+    line-height: 50px;
+    color: $light__gray;
+  }
+}

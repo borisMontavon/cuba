@@ -1,0 +1,238 @@
+/* -----EAT & SLEEP----- */
+.eatsleep__intro {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-top: 20px;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    margin-top: 50px;
+  }
+}
+
+.eatsleep__content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.content__bg__after__sm {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: 5px;
+}
+
+.eatsleep__text {
+  width: 100%;
+  padding: 20px 0;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    width: 75%;
+    padding: 10px 20px;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: $roboto;
+  }
+
+  p {
+    line-height: 20px;
+    font-size: 0.85rem;
+    font-family: $montserrat;
+  }
+}
+
+.content__layer__eatsleep {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s, visibility 0.2s;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    visibility: none;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.content__hover__eatsleep {
+  transition: 0.2s;
+  position: static;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    transform: translate3d(0, 0, 0);
+  }
+
+  p {
+    color: $classic__white;
+    padding: 15px 60px 15px 15px;
+    background-color: $indian__yellow;
+    font-family: $montserrat;
+    border-radius: 3px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+
+    @media screen and (min-width: $computer_breakpoint) {
+      background-color: rgba(212, 157, 73, 0.7);
+
+      &:hover {
+        background-color: rgba(212, 157, 73, 1);
+      }
+    }
+  }
+
+  span {
+    position: relative;
+    right: -25px;
+
+    @media screen and (min-width: $computer_breakpoint) {
+      position: absolute;
+      right: 25px;
+      transition: right 0.3s;
+
+      &:hover {
+        right: 15px;
+      }
+    }
+  }
+}
+
+.eatsleep__content__1 {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  margin: 20px 0 5px 0;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    flex-flow: row wrap;
+  }
+}
+
+.eatsleep__content__2 {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  margin: 5px 0;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    flex-flow: row wrap;
+  }
+}
+
+.eatsleep__content__3 {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  margin: 5px 0;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    flex-flow: row wrap;
+  }
+}
+
+.eatsleep__content__4 {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  margin-top: 5px;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    flex-flow: row wrap;
+  }
+}
+
+.eatsleep__bg__1 {
+  background: url(../../assets/casa-bella-epoca-cuba-hotel.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 45%;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    width: 25%;
+
+    &:hover .content__layer__eatsleep {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.eatsleep__bg__2 {
+  background: url(../../assets/cuba-hostal-guerrilleras.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 45%;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    width: 25%;
+
+    &:hover .content__layer__eatsleep {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.eatsleep__bg__3 {
+  background: url(../../assets/resturante-en-la-habana-con-terraza-cuba.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 45%;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    width: 25%;
+
+    &:hover .content__layer__eatsleep {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.eatsleep__bg__4 {
+  background: url(../../assets/cuppic-orig-cuba-hotel.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 45%;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    width: 25%;
+
+    &:hover .content__layer__eatsleep {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,1142 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Pacifico&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background-color: #d49d49;
+  color: #fff;
+  text-shadow: none;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  p {
+    font-size: 1rem;
+  }
+}
+#toTopButton {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  bottom: 20px;
+  right: 20px;
+  z-index: 98;
+  border: none;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f5f5f5;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+#toTopButton span {
+  padding: 8px;
+}
+@media screen and (min-width: 992px) {
+  #toTopButton {
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #toTopButton:hover {
+    background-color: #d49d49;
+  }
+}
+main {
+  background-color: #f5f5f5;
+  padding-top: 100px;
+  position: relative;
+}
+.container {
+  margin: auto 5%;
+  padding-bottom: 100px;
+}
+@media screen and (min-width: 992px) {
+  .container {
+    margin: auto 10%;
+  }
+}
+.section__container {
+  margin: 0 auto;
+  padding-top: 70px;
+}
+.section__container h3 {
+  font-family: Pacifico, cursive;
+  font-size: 2.6rem;
+  color: #d49d49;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .section__container h3 {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section__container h3 {
+    font-size: 8rem;
+  }
+}
+.footer__content {
+  height: 50px;
+  width: 100%;
+}
+.footer__text {
+  font-family: Montserrat, sans-serif;
+  background-color: #e0e0e0;
+}
+.footer__text p {
+  text-align: center;
+  line-height: 50px;
+  color: #747c81;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 60px;
+  background-color: #e0e0e0;
+  font-family: Montserrat, sans-serif;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  nav {
+    width: 100%;
+  }
+}
+.nav__links {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  top: 60px;
+  background-color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-out;
+}
+@media screen and (min-width: 768px) {
+  .nav__links {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .nav__links {
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translate3d(0, 0, 0);
+    height: 60px;
+    top: 0;
+    width: 45%;
+  }
+}
+.nav__links li {
+  list-style: none;
+  margin: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+  .nav__links li {
+    opacity: 1;
+    margin: 0;
+  }
+}
+.nav__links a {
+  color: #747c81;
+  text-decoration: none;
+  padding: 40px 3.5rem;
+}
+@media screen and (min-width: 768px) {
+  .nav__links a {
+    padding: 40px 7.7rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .nav__links a {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s, color 0.3s;
+    padding: 19px 10px;
+  }
+}
+.nav__links a:hover {
+  color: #d49d49;
+  border-bottom: 2px solid #d49d49;
+}
+.nav__active {
+  transform: translate3d(0, 0, 0);
+}
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.burger {
+  display: block;
+  right: 20px;
+  cursor: pointer;
+  position: absolute;
+}
+@media screen and (min-width: 992px) {
+  .burger {
+    display: none;
+  }
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #747c81;
+  margin: 5px;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+}
+.toggle .line__1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line__2 {
+  opacity: 0;
+}
+.toggle .line__3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+header {
+  top: 0;
+}
+.tns-nav {
+  display: none;
+}
+.header__bg {
+  position: relative;
+}
+.header__bg .diap__1 {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background-image: url(../../assets/trumpet-player-cuba.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 35% 40%;
+  filter: brightness(75%);
+}
+.header__bg .diap__2 {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background-image: url(../../assets/colored-cuba-street.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 70% 40%;
+  filter: brightness(75%);
+}
+.header__bg .diap__3 {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background-image: url(../../assets/colored-cars-famous-taxi-cuba.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 75% 40%;
+  filter: brightness(75%);
+}
+.carousel__container {
+  position: relative;
+  isolation: isolate;
+}
+.controls {
+  text-align: center;
+}
+.controls .prev {
+  left: 25px;
+}
+.controls .next {
+  right: 25px;
+}
+.controls li {
+  display: block;
+  position: absolute;
+  list-style: none;
+  top: 50%;
+  height: 40px;
+  padding: 5px;
+  cursor: pointer;
+  color: #f5f5f5;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+.controls li:hover {
+  background-color: #d49d49;
+}
+.controls li i {
+  display: inline-block;
+  vertical-align: middle;
+}
+.controls li span {
+  padding: 3px;
+}
+#customize__toggle {
+  display: none;
+}
+.header__title {
+  text-align: center;
+  font-family: Pacifico, cursive;
+  font-size: 2.3rem;
+  color: #fff;
+  margin: auto;
+  position: absolute;
+  top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .header__title {
+    font-size: 2.6rem;
+    top: 150px;
+    left: 40px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header__title {
+    font-size: 5rem;
+    top: 75px;
+    left: 80px;
+  }
+}
+.intro__cuba {
+  margin: 0 auto;
+}
+.intro__cuba h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .intro__cuba h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .intro__cuba h4 {
+    font-size: 1.3rem;
+  }
+}
+.intro__cuba p {
+  line-height: 20px;
+  font-family: Montserrat, sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .intro__cuba p {
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .intro__cuba p {
+    line-height: 30px;
+  }
+}
+.news__content {
+  display: flex;
+  flex-flow: row wrap;
+}
+.content__bg__after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: 5px;
+}
+.content__title {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  padding: 20px;
+}
+@media screen and (min-width: 768px) {
+  .content__title {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .content__title {
+    font-size: 1.5rem;
+  }
+}
+.news__content__1 {
+  background: url(../../assets/cuba-music-band.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 45% 35%;
+  border-radius: 5px;
+  height: 400px;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  font-family: Montserrat, sans-serif;
+}
+@media screen and (min-width: 992px) {
+  .news__content__1 {
+    width: 24%;
+  }
+  .news__content__1:hover .content__layer {
+    visibility: visible;
+    opacity: 1;
+  }
+  .news__content__1:hover .content__hover {
+    transform: translate3d(0, 1, 0);
+  }
+}
+.content__layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  border-radius: 5px;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+@media screen and (min-width: 992px) {
+  .content__layer {
+    background: rgba(212, 157, 73, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+  }
+}
+.content__hover {
+  position: absolute;
+  padding: 0 20px;
+  bottom: 20px;
+}
+@media screen and (min-width: 992px) {
+  .content__hover {
+    transition: 0.2s;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.news__content__2 {
+  background: url(../../assets/famous-cuba-cigar-rhum.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 45% 35%;
+  border-radius: 5px;
+  height: 400px;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  display: inline-block;
+  font-family: Montserrat, sans-serif;
+}
+@media screen and (min-width: 992px) {
+  .news__content__2 {
+    width: 24%;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  .news__content__2:hover .content__layer {
+    visibility: visible;
+    opacity: 1;
+  }
+  .news__content__2:hover .content__hover {
+    transform: translate3d(0, 1, 0);
+  }
+}
+.news__content__3 {
+  background: url(../../assets/cuba-street.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 45% 35%;
+  border-radius: 5px;
+  height: 400px;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  display: inline-block;
+  font-family: Montserrat, sans-serif;
+}
+@media screen and (min-width: 992px) {
+  .news__content__3 {
+    width: 24%;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  .news__content__3:hover .content__layer {
+    visibility: visible;
+    opacity: 1;
+  }
+  .news__content__3:hover .content__hover {
+    transform: translate3d(0, 1, 0);
+  }
+}
+.news__content__4 {
+  background: url(../../assets/cuba-taxi-driving.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 35%;
+  border-radius: 5px;
+  height: 400px;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  display: inline-block;
+  font-family: Montserrat, sans-serif;
+}
+@media screen and (min-width: 992px) {
+  .news__content__4 {
+    width: 24%;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  .news__content__4:hover .content__layer {
+    visibility: visible;
+    opacity: 1;
+  }
+  .news__content__4:hover .content__hover {
+    transform: translate3d(0, 1, 0);
+  }
+}
+.act__content {
+  display: flex;
+  flex-flow: column wrap;
+}
+.act__content__1 {
+  background: url(../../assets/cuba-street-dance.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 60%;
+  border-radius: 5px;
+  width: 100%;
+  height: 250px;
+}
+.content__bg__after__lg {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: 5px;
+}
+.act__content__text h4 {
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .act__content__text h4 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .act__content__text h4 {
+    font-size: 1.5rem;
+  }
+}
+.act__content__text p {
+  font-family: Montserrat, sans-serif;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .act__content__text p {
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .act__content__text p {
+    line-height: 30px;
+  }
+}
+.act__content__2 {
+  background: url(../../assets/cuba-beach.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 65%;
+  border-radius: 5px;
+  width: 100%;
+  height: 250px;
+}
+.act__content__3 {
+  background: url(../../assets/cuba-elder-smoking-cigar.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 45%;
+  border-radius: 5px;
+  width: 100%;
+  height: 250px;
+}
+.eatsleep__intro {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  margin-top: 20px;
+}
+@media screen and (min-width: 992px) {
+  .eatsleep__intro {
+    margin-top: 50px;
+  }
+}
+.eatsleep__content {
+  display: flex;
+  flex-flow: row wrap;
+}
+.content__bg__after__sm {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: 5px;
+}
+.eatsleep__text {
+  width: 100%;
+  padding: 20px 0;
+}
+@media screen and (min-width: 992px) {
+  .eatsleep__text {
+    width: 75%;
+    padding: 10px 20px;
+  }
+}
+.eatsleep__text h4 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: Roboto, sans-serif;
+}
+.eatsleep__text p {
+  line-height: 20px;
+  font-size: 0.85rem;
+  font-family: Montserrat, sans-serif;
+}
+.content__layer__eatsleep {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s, visibility 0.2s;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .content__layer__eatsleep {
+    visibility: none;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+.content__hover__eatsleep {
+  transition: 0.2s;
+  position: static;
+}
+@media screen and (min-width: 992px) {
+  .content__hover__eatsleep {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.content__hover__eatsleep p {
+  color: #fff;
+  padding: 15px 60px 15px 15px;
+  background-color: #d49d49;
+  font-family: Montserrat, sans-serif;
+  border-radius: 3px;
+  width: 100%;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+@media screen and (min-width: 992px) {
+  .content__hover__eatsleep p {
+    background-color: rgba(212, 157, 73, 0.7);
+  }
+  .content__hover__eatsleep p:hover {
+    background-color: #d49d49;
+  }
+}
+.content__hover__eatsleep span {
+  position: relative;
+  right: -25px;
+}
+@media screen and (min-width: 992px) {
+  .content__hover__eatsleep span {
+    position: absolute;
+    right: 25px;
+    transition: right 0.3s;
+  }
+  .content__hover__eatsleep span:hover {
+    right: 15px;
+  }
+}
+.eatsleep__content__1 {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  margin: 20px 0 5px 0;
+}
+@media screen and (min-width: 992px) {
+  .eatsleep__content__1 {
+    flex-flow: row wrap;
+  }
+}
+.eatsleep__content__2 {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  margin: 5px 0;
+}
+@media screen and (min-width: 992px) {
+  .eatsleep__content__2 {
+    flex-flow: row wrap;
+  }
+}
+.eatsleep__content__3 {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  margin: 5px 0;
+}
+@media screen and (min-width: 992px) {
+  .eatsleep__content__3 {
+    flex-flow: row wrap;
+  }
+}
+.eatsleep__content__4 {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  margin-top: 5px;
+}
+@media screen and (min-width: 992px) {
+  .eatsleep__content__4 {
+    flex-flow: row wrap;
+  }
+}
+.eatsleep__bg__1 {
+  background: url(../../assets/casa-bella-epoca-cuba-hotel.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 45%;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .eatsleep__bg__1 {
+    width: 25%;
+  }
+  .eatsleep__bg__1:hover .content__layer__eatsleep {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.eatsleep__bg__2 {
+  background: url(../../assets/cuba-hostal-guerrilleras.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 45%;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .eatsleep__bg__2 {
+    width: 25%;
+  }
+  .eatsleep__bg__2:hover .content__layer__eatsleep {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.eatsleep__bg__3 {
+  background: url(../../assets/resturante-en-la-habana-con-terraza-cuba.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 45%;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .eatsleep__bg__3 {
+    width: 25%;
+  }
+  .eatsleep__bg__3:hover .content__layer__eatsleep {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.eatsleep__bg__4 {
+  background: url(../../assets/cuppic-orig-cuba-hotel.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 45%;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .eatsleep__bg__4 {
+    width: 25%;
+  }
+  .eatsleep__bg__4:hover .content__layer__eatsleep {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.stores__title__intro {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .stores__title__intro {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .stores__title__intro {
+    font-size: 1.5rem;
+    margin-top: 50px;
+  }
+}
+.stores__title {
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .stores__title {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .stores__title {
+    font-size: 1.5rem;
+  }
+}
+.stores__text {
+  line-height: 20px;
+  font-family: Montserrat, sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .stores__text {
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .stores__text {
+    line-height: 30px;
+  }
+}
+.stores__list {
+  list-style: none;
+  line-height: 20px;
+  font-family: Montserrat, sans-serif;
+  padding: 15px;
+}
+@media screen and (min-width: 768px) {
+  .stores__list {
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .stores__list {
+    line-height: 30px;
+  }
+}
+.stores__list li {
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .stores__list li {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .stores__list li {
+    font-size: 1rem;
+  }
+}
+.gray__text {
+  color: #747c81;
+  font-weight: 400;
+}
+.links__content {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 20px;
+}
+@media screen and (min-width: 992px) {
+  .links__content {
+    flex-flow: row wrap;
+    margin-top: 50px;
+  }
+}
+.links__content__1 {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-flow: column wrap;
+  text-decoration: none;
+}
+@media screen and (min-width: 992px) {
+  .links__content__1 {
+    width: 30%;
+  }
+}
+.links__content__1:hover .links__img__1 {
+  border: 1px solid #d49d49;
+}
+.links__content__1:hover .links__text__1 {
+  border: 1px solid #d49d49;
+  color: #fff;
+  background-color: #d49d49;
+}
+.links__content__1:hover .links__text__1 span {
+  right: -10px;
+}
+.links__img__1 {
+  background-image: url(../../assets/world-health-organization-logo.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 55%;
+  width: 100%;
+  height: 250px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px 5px 0 0;
+  margin: 0;
+  transition: border 0.2s;
+  background-color: rgba(245, 245, 245, 0.8);
+}
+.links__text__1 {
+  background-color: #e0e0e0;
+  color: #747c81;
+  width: 100%;
+  height: 150px;
+  border: 1px solid #e0e0e0;
+  border-radius: 0 0 5px 5px;
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  transition: border 0.2s, color 0.2s, background-color 0.2s;
+}
+.links__text__1 p {
+  padding: 20px;
+}
+.links__text__1 span {
+  position: relative;
+  right: 0;
+  transition: right 0.3s;
+}
+.links__content__2 {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 10px;
+  text-decoration: none;
+}
+@media screen and (min-width: 992px) {
+  .links__content__2 {
+    width: 30%;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+}
+.links__content__2:hover .links__img__2 {
+  border: 1px solid #d49d49;
+}
+.links__content__2:hover .links__text__2 {
+  border: 1px solid #d49d49;
+  color: #fff;
+  background-color: #d49d49;
+}
+.links__content__2:hover .links__text__2 span {
+  right: -10px;
+}
+.links__img__2 {
+  background-image: url(../../assets/logo-2-cuba-tourism.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  width: 100%;
+  height: 250px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px 5px 0 0;
+  margin: 0;
+  transition: border 0.2s;
+  background-color: rgba(245, 245, 245, 0.8);
+}
+.links__text__2 {
+  background-color: #e0e0e0;
+  color: #747c81;
+  width: 100%;
+  height: 150px;
+  border: 1px solid #e0e0e0;
+  border-radius: 0 0 5px 5px;
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  transition: border 0.2s, color 0.2s, background-color 0.2s;
+}
+.links__text__2 p {
+  padding: 20px;
+}
+.links__text__2 span {
+  position: relative;
+  right: 0;
+  transition: right 0.3s;
+}
+.links__content__3 {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 10px;
+  text-decoration: none;
+}
+@media screen and (min-width: 992px) {
+  .links__content__3 {
+    width: 30%;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+}
+.links__content__3:hover .links__img__3 {
+  border: 1px solid #d49d49;
+}
+.links__content__3:hover .links__text__3 {
+  border: 1px solid #d49d49;
+  color: #fff;
+  background-color: #d49d49;
+}
+.links__content__3:hover .links__text__3 span {
+  right: -10px;
+}
+.links__img__3 {
+  background-image: url(../../assets/Cubana-Airlines-logo.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  width: 100%;
+  height: 250px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px 5px 0 0;
+  margin: 0;
+  transition: border 0.2s;
+  background-color: rgba(245, 245, 245, 0.8);
+}
+.links__text__3 {
+  background-color: #e0e0e0;
+  color: #747c81;
+  width: 100%;
+  height: 150px;
+  border: 1px solid #e0e0e0;
+  border-radius: 0 0 5px 5px;
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  transition: border 0.2s, color 0.2s, background-color 0.2s;
+}
+.links__text__3 p {
+  padding: 20px;
+}
+.links__text__3 span {
+  position: relative;
+  right: 0;
+  transition: right 0.3s;
+}
+.darkmode-toggle {
+  z-index: 100 !important;
+  width: 40px !important;
+  height: 40px !important;
+  top: 10px;
+}
+.darkmode--activated #toTopButton {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000913;
+  transition: background-color 0.3s;
+}
+.darkmode--activated #toTopButton:hover {
+  background-color: #d49d49;
+}
+.darkmode--activated nav {
+  background-color: #111;
+}
+.darkmode--activated .nav__links {
+  background-color: #111;
+}
+.darkmode--activated .nav__links a {
+  color: #f5f5f5;
+}
+.darkmode--activated .burger div {
+  background-color: #f5f5f5;
+}
+.darkmode--activated main {
+  background-color: #000913;
+  color: #f5f5f5;
+}
+.darkmode--activated .links__img__1,
+.darkmode--activated .links__img__2,
+.darkmode--activated .links__img__3 {
+  border: 1px solid #111;
+}
+.darkmode--activated .links__text__1,
+.darkmode--activated .links__text__2,
+.darkmode--activated .links__text__3 {
+  background-color: #111;
+  border: 1px solid #111;
+  color: #f5f5f5;
+}

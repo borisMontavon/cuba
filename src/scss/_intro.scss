@@ -1,0 +1,33 @@
+/* -----INTRO----- */
+.intro__cuba {
+  margin: 0 auto;
+
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-family: $roboto;
+    font-weight: bold;
+
+    @media screen and (min-width: $tablet_breakpoint) {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $computer_breakpoint) {
+      font-size: 1.3rem;
+    }
+  }
+
+  p {
+    line-height: 20px;
+    font-family: $montserrat;
+
+    @media screen and (min-width: $tablet_breakpoint) {
+      line-height: 25px;
+    }
+
+    @media screen and (min-width: $computer_breakpoint) {
+      line-height: 30px;
+    }
+  }
+}

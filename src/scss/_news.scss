@@ -1,0 +1,181 @@
+/* -----NEWS----- */
+.news__content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.content__bg__after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: 5px;
+}
+
+.content__title {
+  font-family: $roboto;
+  font-size: 1rem;
+  padding: 20px;
+
+  @media screen and (min-width: $tablet_breakpoint) {
+    font-size: 1.3rem;
+  }
+
+  @media screen and (min-width: $computer_breakpoint) {
+    font-size: 1.5rem;
+  }
+}
+
+/*content__1 style and hover effect*/
+.news__content__1 {
+  background: url(../../assets/cuba-music-band.webp); /*Photo by Ban Yido on Unsplash*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 45% 35%;
+  border-radius: 5px;
+  height: 400px;
+  color: $classic__white;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  font-family: $montserrat;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    width: 24%;
+
+    &:hover .content__layer {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:hover .content__hover {
+      transform: translate3d(0, 1, 0);
+    }
+  }
+}
+
+.content__layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  border-radius: 5px;
+  transition: opacity 0.2s, visibility 0.2s;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    background: rgba(212, 157, 73, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+  }
+}
+
+.content__hover {
+  position: absolute;
+  padding: 0 20px;
+  bottom: 20px;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    transition: 0.2s;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/*content__2 style and hover effect*/
+.news__content__2 {
+  background: url(../../assets/famous-cuba-cigar-rhum.webp); /*Photo by Matthias Jordan on Unsplash*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 45% 35%;
+  border-radius: 5px;
+  height: 400px;
+  color: $classic__white;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  display: inline-block;
+  font-family: $montserrat;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    width: 24%;
+    margin-top: 0;
+    margin-left: 10px;
+
+    &:hover .content__layer {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:hover .content__hover {
+      transform: translate3d(0, 1, 0);
+    }
+  }
+}
+
+/*content__3 style and hover effect*/
+.news__content__3 {
+  background: url(../../assets/cuba-street.webp); /*Photo by Alexander Kunze on Unsplash*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 45% 35%;
+  border-radius: 5px;
+  height: 400px;
+  color: $classic__white;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  display: inline-block;
+  font-family: $montserrat;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    width: 24%;
+    margin-top: 0;
+    margin-left: 10px;
+
+    &:hover .content__layer {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:hover .content__hover {
+      transform: translate3d(0, 1, 0);
+    }
+  }
+}
+
+/*content__4 style and hover effect*/
+.news__content__4 {
+  background: url(../../assets/cuba-taxi-driving.webp); /*Photo by Louis Renaudineau on Unsplash*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 35%;
+  border-radius: 5px;
+  height: 400px;
+  color: $classic__white;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  display: inline-block;
+  font-family: $montserrat;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    width: 24%;
+    margin-top: 0;
+    margin-left: 10px;
+
+    &:hover .content__layer {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:hover .content__hover {
+      transform: translate3d(0, 1, 0);
+    }
+  }
+}

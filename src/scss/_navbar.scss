@@ -1,0 +1,128 @@
+/* -----NAVBAR----- */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 60px;
+  background-color: $gainsboro;
+  font-family: "Montserrat", sans-serif;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    width: 100%;
+  }
+}
+
+.nav__links {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  top: 60px;
+  background-color: $gainsboro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-out;
+
+  @media screen and (min-width: $tablet_breakpoint) {
+    width: 55%;
+  }
+
+  @media screen and (min-width: $computer_breakpoint) {
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translate3d(0%, 0, 0);
+    height: 60px;
+    top: 0;
+    width: 45%;
+  }
+
+  li {
+    list-style: none;
+    margin: 40px;
+    opacity: 0;
+    cursor: pointer;
+
+    @media screen and (min-width: $computer_breakpoint) {
+      opacity: 1;
+      margin: 0;
+    }
+  }
+
+  a {
+    color: $light__gray;
+    text-decoration: none;
+    padding: 40px 3.5rem;
+
+    @media screen and (min-width: $tablet_breakpoint) {
+      padding: 40px 7.7rem;
+    }
+
+    @media screen and (min-width: $computer_breakpoint) {
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s, color 0.3s;
+      padding: 19px 10px;
+    }
+
+    &:hover {
+      color: $indian__yellow;
+      border-bottom: 2px solid $indian__yellow;
+    }
+  }
+}
+
+.nav__active {
+  transform: translate3d(0%, 0, 0);
+}
+
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* -----BURGER----- */
+.burger {
+  display: block;
+  right: 20px;
+  cursor: pointer;
+  position: absolute;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    display: none;
+  }
+
+  div {
+    width: 25px;
+    height: 3px;
+    background-color: $light__gray;
+    margin: 5px;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+  }
+}
+
+.toggle {
+  .line__1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .line__2 {
+    opacity: 0;
+  }
+
+  .line__3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
