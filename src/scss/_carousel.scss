@@ -110,7 +110,9 @@ header {
 
   @media screen and (min-width: $computer_breakpoint) {
     font-size: 5rem;
-    top: 75px;
-    left: 80px;
+    top: 8.5rem;
+    left: 0;
+    transform: translate3d(50%, 0, 0);
+    right: 50%;
   }
 }
